@@ -8,7 +8,7 @@ Chạy ở chế độ offline, threshold 900 token, giữ 6 message gần nhấ
 .venv\Scripts\python.exe src/benchmark.py
 ```
 
-Kiểm tra toàn bộ test (59 test đã pass):
+Kiểm tra toàn bộ test (55 test đã pass):
 
 ```powershell
 .venv\Scripts\python.exe -m pytest -q

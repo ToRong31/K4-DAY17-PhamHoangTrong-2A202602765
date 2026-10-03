@@ -1,3 +1,21 @@
+# K4-DAY17-PhamHoangTrong-2A202602765
+
+Bài làm cá nhân Day17. Repo nộp: https://github.com/ToRong31/K4-DAY17-PhamHoangTrong-2A202602765
+
+## Chạy bản nộp từ trạng thái sạch
+
+Yêu cầu Python >= 3.11. Cài các dependency offline:
+
+```bash
+python -m pip install -r requirements.txt
+python src/benchmark.py
+pytest src/test_agents.py -v
+```
+
+Không cần `.env`, API key hoặc `state/` có sẵn. Benchmark tự tạo state tạm riêng cho từng suite, in Standard và Long-Context Stress, mỗi bảng có Baseline/Advanced và đủ sáu chỉ số. `src/test_agents.py` có đúng bốn test bắt buộc; các file `src/test_*.py` khác kiểm tra bổ sung. Chạy toàn bộ bằng `python -m pytest -q`.
+
+Phân tích Bước 8 và bonus: [STEP8.md](STEP8.md). Output benchmark: [BENCHMARK_RESULTS.md](BENCHMARK_RESULTS.md). `.env`, `state/` và `.venv/` không được đưa vào Git. Phần cài LangChain/provider phía dưới chỉ cần khi mở rộng sang live model.
+
 # Phase 2, Track 3, Day 17: Memory Systems for AI Agent
 
 Trong Day 17 này, các bạn sẽ tập trung vào một câu hỏi rất thực tế: làm sao để AI agent **không chỉ trả lời tốt trong một lượt chat**, mà còn **nhớ đúng thông tin quan trọng qua nhiều phiên làm việc** mà vẫn kiểm soát được chi phí token.

@@ -1,6 +1,6 @@
 # Phân tích benchmark và bonus: Conflict handling
 
-Đo lại ngày 03/10/2026 bằng `python src/benchmark.py`. Output và hướng dẫn chạy nằm trong [BENCHMARK_RESULTS.md](BENCHMARK_RESULTS.md). Dùng tên `MEMORY_BENCHMARK_ANALYSIS.md` cho phần phân tích trong bài nộp; README, Guide và Rubric không quy định tên file bắt buộc. Nếu giảng viên có quy định riêng thì đổi tên theo quy định đó.
+Đo lại ngày 03/10/2026 bằng `python src/benchmark.py`. Output và hướng dẫn chạy nằm trong [BENCHMARK_RESULTS.md](BENCHMARK_RESULTS.md). Dùng tên `STEP8.md` cho phần phân tích trong bài nộp; README, Guide và Rubric không quy định tên file bắt buộc. Nếu giảng viên có quy định riêng thì đổi tên theo quy định đó.
 
 ## Điều kiện đo và kết quả
 
@@ -84,3 +84,9 @@ Chính sách giá trị mới nhất thắng có thể ghi đè fact đúng bằ
 | 90–100 | Conflict handling đã có code, test correction/restart, probe 57→39 byte và 12→8 token, phân tích rủi ro | Có cơ sở xét bonus; điểm cuối do reviewer quyết định |
 
 Kiểm tra ngày 03/10/2026: `python -m pytest src/test_agents.py -v` thu thập đúng 4 test và pass; `python -m pytest -q` có 55 test pass. Test cốt lõi dựng đủ `LabConfig` trong `tmp_path`, threshold 80, giữ 2 message và ép offline. Không cần API key để tái lập kết quả benchmark hoặc các test này.
+
+## Kiểm tra bản nộp từ trạng thái sạch
+
+Đã kiểm tra một bản sao riêng của các file bài nộp, ban đầu không có `.env` hay `state/`, dùng môi trường Python mới chỉ cài `requirements.txt`. Hai lệnh bắt buộc `python src/benchmark.py` và `pytest src/test_agents.py -v` chạy thành công: bảng có cùng số liệu ở trên, test thu thập đúng 4 trường hợp và pass. Bộ kiểm tra toàn bộ có 55 trường hợp pass. Các test Baseline bổ sung nằm riêng trong `src/test_baseline.py`.
+
+Repo GitHub: https://github.com/ToRong31/K4-DAY17-PhamHoangTrong-2A202602765. Tên repo đúng mẫu, dữ liệu input giữ nguyên, `.env` và `state/` không được Git theo dõi. Bước gửi link trên VLearn cần được xác nhận riêng; việc đẩy code lên GitHub chưa đồng nghĩa đã nộp bài trên VLearn.
